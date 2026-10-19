@@ -41,5 +41,7 @@ def save(path, size):
     path.write_bytes(b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR', struct.pack('!2I5B', size, size, 8, 6, 0, 0, 0))
                      +chunk(b'IDAT', zlib.compress(bytes(data), 9))+chunk(b'IEND', b''))
 
-save(ROOT/'app/src/main/res/drawable-nodpi/ic_launcher.png', 128)
+for density, size in [('mdpi', 48), ('hdpi', 72), ('xhdpi', 96),
+                      ('xxhdpi', 144), ('xxxhdpi', 192)]:
+    save(ROOT/('app/src/main/res/drawable-'+density)/'ic_launcher.png', size)
 save(ROOT/'docs/icon.png', 512)

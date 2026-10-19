@@ -30,11 +30,13 @@ SOFTWARE.
 ## OpenMemories-Framework
 
 Runtime dependency: [OpenMemories-Framework](https://github.com/ma1co/OpenMemories-Framework),
-Copyright (c) 2015 ma1co, MIT license as reproduced above. Sony Scalar API stubs are
+Copyright (c) 2016 ma1co, MIT license as reproduced above (with this 2016 copyright notice).
+Sony Scalar API stubs are
 compile-time only and are not bundled in the APK.
 
 ## Build and test dependencies
 
 Gradle wrapper and build tooling: Gradle / Android Gradle Plugin (Apache License 2.0).
+The Gradle distribution's license and notice are included in `LICENSES/`.
 JUnit 4.12 (Eclipse Public License 1.0) and Hamcrest 1.3 (BSD) are test-only dependencies;
 they are not shipped in the application.
