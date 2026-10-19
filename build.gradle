@@ -1,0 +1,14 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+    }
+    dependencies { classpath 'com.android.tools.build:gradle:2.2.3' }
+}
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://jitpack.io' }
+    }
+}

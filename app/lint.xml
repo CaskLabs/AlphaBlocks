@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Camera firmware runs API 10; a newer target is deliberately unsupported. -->
+    <issue id="OldTargetApi" severity="ignore" />
+    <!-- An offline, sideloaded PMCA game has no Google Search entry points. -->
+    <issue id="GoogleAppIndexingWarning" severity="ignore" />
+    <!-- GameView is constructed with its session; it is never inflated from XML. -->
+    <issue id="ViewConstructor"><ignore path="src/main/java/com/casklabs/alphablocks/GameView.java" /></issue>
+</lint>

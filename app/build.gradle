@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 10
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        applicationId 'com.casklabs.alphablocks'
+        minSdkVersion 10
+        targetSdkVersion 10
+        versionCode 1
+        versionName '1.0.0'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+    testOptions { unitTests.returnDefaultValues = true }
+    lintOptions { abortOnError true }
+}
+
+android.applicationVariants.all { variant ->
+    variant.outputs.each { output ->
+        output.outputFile = new File(output.outputFile.parent,
+                "AlphaBlocks-${variant.versionName}-${output.baseName}.apk")
+    }
+}
+
+dependencies {
+    compile 'com.github.ma1co.OpenMemories-Framework:framework:-SNAPSHOT'
+    provided 'com.github.ma1co.OpenMemories-Framework:stubs:-SNAPSHOT'
+    testCompile 'junit:junit:4.12'
+}
