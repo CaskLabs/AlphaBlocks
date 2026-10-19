@@ -103,14 +103,15 @@ public class GameSessionTest {
         public void outline(float x,float y,float w,float h,float r,int c) { }
         public void text(String v,float x,float y,float s,int c,boolean b) { }
     };
-    @Test public void clickableMenuAndGameplayControlsHaveDistinctTargets() {
+    @Test public void clickableMenuAndHoldPanelWorkWithoutBottomControls() {
         GameScene scene = new GameScene(session); scene.draw(NO_DRAW);
         scene.click(scene.hit(200,170)); assertEquals(GameSession.PLAY,session.getScreen());
         scene.draw(NO_DRAW);
-        int x = session.game.getX(); scene.click(scene.hit(60,450));
-        assertEquals(x-1,session.game.getX());
-        scene.click(scene.hit(470,450)); assertEquals(1,session.game.getPieces());
-        scene.click(scene.hit(580,450)); assertEquals(GameSession.PAUSE,session.getScreen());
+        for (int i = 0; i < 6; i++) assertEquals(-1,scene.hit(60+i*102,450));
+        assertEquals(GameSession.HOLD,scene.hit(500,300));
+        int piece = session.game.getPiece(); scene.click(scene.hit(500,300));
+        assertEquals(piece,session.game.getHeld());
+        assertEquals(GameSession.PLAY,session.getScreen());
     }
     @Test public void pausedOverlayDoesNotExposeHoldOrBoardControls() {
         start(); session.suspend();

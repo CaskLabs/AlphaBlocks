@@ -9,7 +9,7 @@ Move, rotate and drop seven colorful pieces, clear rows and beat your high score
 
 ## Download and install
 
-Download **AlphaBlocks-v1.0.0.apk** from [Releases](https://github.com/CaskLabs/AlphaBlocks/releases/latest)
+Download **AlphaBlocks-v1.0.1.apk** from [Releases](https://github.com/CaskLabs/AlphaBlocks/releases/latest)
 and sideload it using [Sony-PMCA-RE](https://github.com/ma1co/Sony-PMCA-RE).
 The APK uses package `com.casklabs.alphablocks` and can be installed alongside GhostBuffer.
 Release APKs are debug-signed for sideloading.
@@ -27,7 +27,7 @@ on a physical Sony α5000 by the user.** Compatibility with other PMCA models is
 - Increasing speed every ten cleared lines and starting levels 1–15.
 - Persistent high score and settings, pause menu and an in-app control guide.
 - Automatic pause when the app loses focus or goes into the background.
-- Uniformly scaled full-screen layout, clickable controls and an original app icon.
+- Uniformly scaled full-screen layout, clickable menus and an original app icon.
 
 No camera capture, SD-card access, network connection or Android permissions are required.
 The current board stays available while the activity remains alive. It is not restored after
@@ -48,7 +48,7 @@ the process exits. High score and settings are stored internally on the camera.
 Half-pressing the shutter is consumed without dropping a piece. In menus, use up/down to select
 and center or shutter to open. Change options with left/right. Exit using **Exit app** on the main menu.
 
-All menu rows and bottom gameplay buttons are clickable on devices with a touchscreen or pointer.
+All menu rows are clickable on devices with a touchscreen or pointer.
 Tap the **Hold / Fn** panel to hold a piece. A keyboard can also use arrow keys or WASD,
 Enter to rotate/select, Space to drop, C to hold and P to pause.
 
@@ -81,7 +81,7 @@ export ANDROID_HOME=/path/to/android-sdk
 The signed installable APK is written to:
 
 ```text
-app/build/outputs/apk/AlphaBlocks-1.0.0-debug.apk
+app/build/outputs/apk/AlphaBlocks-1.0.1-debug.apk
 ```
 
 For an APK update, retain the same signing key. The standard Android debug keystore is local to

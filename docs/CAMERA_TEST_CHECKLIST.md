@@ -4,7 +4,7 @@ Status: the user confirmed that AlphaBlocks 1.0.0 works on a physical Sony α500
 Results for the individual checks below have not yet been recorded.
 
 1. Install the signed APK and launch AlphaBlocks from the camera's application menu.
-2. Verify the entire menu and all six gameplay buttons fit on the screen. No Android title bar should appear.
+2. Verify the entire menu and playfield fit on the screen. No Android title bar or bottom gameplay button bar should appear.
 3. Start using the center button. Confirm the shutter's half-press does nothing and full press drops exactly one piece.
 4. Hold left/right and down. Verify a short repeat delay, steady movement, and an immediate stop after release.
 5. Rotate at both walls and near the floor. Verify pieces stay inside the playfield.
@@ -16,7 +16,7 @@ Results for the individual checks below have not yet been recorded.
 11. Play until game-over. Verify Play again starts with a clean board and preserves the best score.
 12. Exit through the main menu and verify the normal camera screen and automatic power-off behavior return.
 
-On a device with touch/pointer support, also check every menu row, the six bottom controls
-and the hold panel. Dragging or cancelling a press must release movement.
+On a device with touch/pointer support, also check every menu row and the hold panel.
+Dragging away or cancelling a press must not activate a control.
 
 Record model, firmware, displayed resolution, APK version and any problematic button when reporting results.

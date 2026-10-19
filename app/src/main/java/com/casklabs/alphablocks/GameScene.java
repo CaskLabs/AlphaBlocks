@@ -25,11 +25,10 @@ public final class GameScene {
         d.rect(0,0,WIDTH,HEIGHT,0,BG);
         logo(d,22,14,5);
         d.text("ALPHABLOCKS",51,27,17,INK,true);
-        d.text("CASKLABS / 1.0",502,26,11,MUTED,false);
+        d.text("CASKLABS / 1.0.1",502,26,11,MUTED,false);
         drawBoard(d);
         int screen = session.getScreen();
-        if (screen == GameSession.PLAY) drawControls(d);
-        else {
+        if (screen != GameSession.PLAY) {
             d.rect(0,36,640,444,0,0xde0b1220);
             if (screen == GameSession.HELP) help(d);
             else menu(d,screen);
@@ -99,15 +98,6 @@ public final class GameScene {
                 size,muted ? 0xff586479 : COLORS[type],false);
     }
     private void panel(Draw d,float x,float y,float w,float h) { d.rect(x,y,w,h,9,PANEL); }
-    private void drawControls(Draw d) {
-        String[] labels = {"LEFT","RIGHT","ROTATE","DOWN","DROP","PAUSE"};
-        int[] actions = {GameSession.LEFT,GameSession.RIGHT,GameSession.ACCEPT,
-                GameSession.DOWN,GameSession.DROP,GameSession.MENU};
-        for (int i = 0; i < labels.length; i++) {
-            float x = 18+i*102;
-            button(d,x,436,94,34,labels[i],actions[i],i == 4);
-        }
-    }
     private void button(Draw d,float x,float y,float w,float h,String text,int action,boolean primary) {
         d.rect(x,y,w,h,7,primary ? ACCENT : PANEL);
         d.outline(x,y,w,h,7,primary ? ACCENT : 0xff344963);
