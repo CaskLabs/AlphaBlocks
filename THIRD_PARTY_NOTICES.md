@@ -38,5 +38,5 @@ compile-time only and are not bundled in the APK.
 
 Gradle wrapper and build tooling: Gradle / Android Gradle Plugin (Apache License 2.0).
 The Gradle distribution's license and notice are included in `LICENSES/`.
-JUnit 4.12 (Eclipse Public License 1.0) and Hamcrest 1.3 (BSD) are test-only dependencies;
+JUnit 4.12 (Eclipse Public License 1.0) and Hamcrest 1.3 (BSD) are test-only dependencies and
 they are not shipped in the application.

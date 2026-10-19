@@ -3,7 +3,7 @@
 # AlphaBlocks
 
 A falling-block puzzle for Sony PlayMemories Camera Apps (PMCA) cameras, by CaskLabs.
-Move, rotate and drop seven colorful pieces, clear rows and beat your high score — using the camera's own buttons.
+Move, rotate and drop seven colorful pieces, clear rows and beat your high score using the camera's own buttons.
 
 ![AlphaBlocks gameplay preview](docs/gameplay.png)
 
@@ -15,13 +15,13 @@ The APK uses package `com.casklabs.alphablocks` and can be installed alongside G
 Release APKs are debug-signed for sideloading.
 
 AlphaBlocks targets PMCA's Android 2.3.3 / API 10 environment. It is designed around the
-Sony α5000's landscape display and controls, but **this first version has not yet been tested
-on a physical camera**. Other PMCA models may work; compatibility is not confirmed.
+Sony α5000's landscape display and controls. **Version 1.0.0 has been confirmed working
+on a physical Sony α5000 by the user.** Compatibility with other PMCA models is not confirmed.
 
 ## Features
 
 - A 10 × 20 playfield, seven-bag randomization and three-piece preview.
-- Clockwise rotation with wall and floor kicks; a 500 ms lock delay with a reset limit.
+- Clockwise rotation with wall and floor kicks and a 500 ms lock delay with a reset limit.
 - Hold / swap once per piece and an optional landing guide.
 - Soft drop and instant hard drop with drop points.
 - Increasing speed every ten cleared lines and starting levels 1–15.
@@ -30,20 +30,20 @@ on a physical camera**. Other PMCA models may work; compatibility is not confirm
 - Uniformly scaled full-screen layout, clickable controls and an original app icon.
 
 No camera capture, SD-card access, network connection or Android permissions are required.
-The current board stays available while the activity remains alive; it is not restored after
+The current board stays available while the activity remains alive. It is not restored after
 the process exits. High score and settings are stored internally on the camera.
 
 ## Camera controls
 
 | Button | During play |
 | --- | --- |
-| Left / right | Move; hold to repeat |
+| Left / right | Move. Hold to repeat |
 | Up / center | Rotate clockwise |
-| Down | Soft drop; hold to repeat |
+| Down | Soft drop. Hold to repeat |
 | Full shutter press | Hard drop and lock |
 | Fn / AEL, if present | Hold / swap piece |
-| Play / Menu | Pause; press again to resume from the pause menu |
-| Delete | Pause; return from submenus |
+| Play / Menu | Pause. Press again to resume from the pause menu |
+| Delete | Pause or return from submenus |
 
 Half-pressing the shutter is consumed without dropping a piece. In menus, use up/down to select
 and center or shutter to open. Change options with left/right. Exit using **Exit app** on the main menu.
@@ -61,9 +61,9 @@ Enter to rotate/select, Space to drop, C to hold and P to pause.
 | 3 | 500 |
 | 4 | 800 |
 
-Soft drop adds one point per cell; hard drop adds two. Gravity alone adds no points.
-Every ten cleared rows increases the level by one. Starting-level changes apply to the next game;
-the landing guide can be changed during a paused game.
+Soft drop adds one point per cell. Hard drop adds two. Gravity alone adds no points.
+Every ten cleared rows increases the level by one. Starting-level changes apply to the next game.
+The landing guide can be changed during a paused game.
 
 ## Build
 
@@ -100,7 +100,9 @@ Run them without an Android SDK using JDK 8, Python 3 and curl:
 ```
 
 GitHub Actions runs the same suite. Android compilation and lint are additional local build checks.
-Hardware input routing, PMCA display behavior and on-camera performance still need a physical camera test.
+The user has confirmed that version 1.0.0 works on a physical Sony α5000. The
+[camera test checklist](docs/CAMERA_TEST_CHECKLIST.md) covers detailed checks for controls,
+lifecycle behavior and other models.
 
 The images in `docs/` are **desktop renders of the same Java scene used in the APK**, not camera screenshots.
 Regenerate them with a desktop JDK:

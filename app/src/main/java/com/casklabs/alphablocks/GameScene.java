@@ -47,8 +47,6 @@ public final class GameScene {
         d.text(String.valueOf(g.getLevel()),32,252,25,INK,true);
         d.text("LINES",112,218,12,MUTED,true);
         d.text(String.valueOf(g.getLines()),112,252,25,INK,true);
-        d.text("MAKE ROOM.",24,332,15,INK,true);
-        d.text("KEEP GOING.",24,353,15,INK,true);
         d.text("10 lines = next level",24,382,12,MUTED,false);
         d.text("MENU / PLAY to pause",24,405,12,MUTED,false);
         d.rect(BX-3,BY-3,196,386,5,0xff26374f);

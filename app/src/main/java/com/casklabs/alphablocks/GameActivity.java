@@ -36,7 +36,7 @@ public final class GameActivity extends Activity implements DisplayManager.Liste
             display.addListener(this);
             display.setColorDepth(DisplayManager.ColorDepth.HIGH);
         } catch (LinkageError e) {
-            Log.i("AlphaBlocks","Scalar display unavailable; using Android display");
+            Log.i("AlphaBlocks","Scalar display unavailable. Using Android display");
         } catch (RuntimeException e) {
             Log.w("AlphaBlocks","Scalar display setup failed",e);
         }

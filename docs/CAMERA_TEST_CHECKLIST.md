@@ -1,6 +1,7 @@
 # First camera test
 
-Status: pending physical camera testing.
+Status: the user confirmed that AlphaBlocks 1.0.0 works on a physical Sony α5000.
+Results for the individual checks below have not yet been recorded.
 
 1. Install the signed APK and launch AlphaBlocks from the camera's application menu.
 2. Verify the entire menu and all six gameplay buttons fit on the screen. No Android title bar should appear.
@@ -11,8 +12,8 @@ Status: pending physical camera testing.
 7. Pause with Play/Menu and resume. The stack should not advance while paused.
 8. Open Options while paused, toggle the landing guide, then return to the same game.
 9. Change starting level, end the game from the pause menu and start a new game. The new level should apply.
-10. Switch away or power-cycle after a pause. Relaunch and verify high score and settings remain; a finished process starts at the main menu.
-11. Play until game-over; verify Play again starts with a clean board and preserves the best score.
+10. Switch away or power-cycle after a pause. Relaunch and verify high score and settings remain. A finished process starts at the main menu.
+11. Play until game-over. Verify Play again starts with a clean board and preserves the best score.
 12. Exit through the main menu and verify the normal camera screen and automatic power-off behavior return.
 
 On a device with touch/pointer support, also check every menu row, the six bottom controls
