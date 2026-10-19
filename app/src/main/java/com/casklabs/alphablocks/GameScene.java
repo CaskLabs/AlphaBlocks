@@ -119,15 +119,12 @@ public final class GameScene {
         boolean home = screen == GameSession.HOME;
         boolean options = screen == GameSession.OPTIONS;
         boolean over = screen == GameSession.OVER;
-        String title = home ? "One more block." : options ? "Your game. Your pace."
-                : over ? "Room for another?" : "Take a breather.";
-        String subtitle = home ? "A falling-block puzzle for your camera."
-                : options ? "Changes to starting level apply to the next game."
-                : over ? "SCORE " + session.game.getScore() + "    BEST " + session.getBest()
-                : "Your game is paused.";
+        String title = home ? "Main Menu" : options ? "Options"
+                : over ? "Game Over" : "Paused";
         float top = 72;
         d.text(title,112,top+26,30,INK,true);
-        d.text(subtitle,112,top+53,13,MUTED,false);
+        if (over) d.text("SCORE " + session.game.getScore() + "    BEST " + session.getBest(),
+                112,top+53,13,MUTED,false);
         int count = session.rowCount();
         for (int i = 0; i < count; i++) {
             float y = top+76+i*56;
@@ -142,8 +139,7 @@ public final class GameScene {
         if (options) d.text("LEFT / RIGHT to adjust. Tap a row to change it.",112,415,12,MUTED,false);
     }
     private void help(Draw d) {
-        d.text("Small camera. Big game.",86,85,29,INK,true);
-        d.text("Complete rows. Keep the stack below the top.",86,114,14,MUTED,false);
+        d.text("Controls",86,85,29,INK,true);
         String[] keys = {"LEFT / RIGHT", "UP / CENTER", "DOWN", "SHUTTER", "FN", "PLAY / MENU"};
         String[] values = {"Move (hold to repeat)", "Rotate clockwise", "Soft drop (hold)",
                 "Drop and lock", "Hold / swap piece", "Pause / resume"};
